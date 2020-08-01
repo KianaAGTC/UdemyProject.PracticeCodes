@@ -1,0 +1,40 @@
+Python --> an oriented-object programming language
+Named after monty python flying circus
+Programming paradigm: a way to classify programming language based on their feature
+Imperative; procedural; funcational; declarative; logic; mathematical
+Literal:  A value of some type (string or numeric)
+Function: A name of block code we can call by using its name
+Argument: A value passed to the function
+Calling function
+print fucntion
+print('hello, world!')
+print (1+2)
+print("The end")
+print ("The end", "or is it?", "keep watching", 3)
+print ("my hovercraft is full of eels")
+print (6*7)
+print("python is fun")
+print ("hello+world")
+greeting = "hello"
+print(greeting + ' ' + name)
+name = input("please enter your name")
+print(greeting + ' ' + name)
+
+Create new lines: splitstring = "This string has been\nsplit over\nseveral\nlines"
+print(splitstring)
+
+Create Space: tabbedstring = "1\t2\t3"
+print (tabbedstring)
+
+tabbedstring2 = "1\2\3"
+print (tabbedstring2)
+
+print ('The pet shop owner said "no, no, \'e\'s uh,...he\'s resting".')
+#or
+print ("the pet shop owner said \"no, no, 'e's uh,...he's resting\".")
+#or
+print ('the pet shop owner said "no, no, \'e\'s uh,...he\'s resting".')
+
+name = input("number")
+print(name)
+print ("number 1\tThe larch")
