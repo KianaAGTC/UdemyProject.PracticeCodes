@@ -1,0 +1,255 @@
+print("Python was created by Guido van Rossum.")
+print("He's referred to as the BDFL,")
+print("the Benevolent Dictator For Life")
+print("and has the final word when it comes to enhancements to Python.")
+
+meal1 = "spam" + "eggs" + "beans"
+meal2 = "spam\neggs\nbeans"
+meal3 = "spam, eggs, beans"
+meal4 = """spam
+eggs
+beans"""
+print(meal1)
+print(meal2)
+print(meal3)
+print(meal4)
+
+print("Terry\tJohn\tGraham\tMichael\tEric\tTerry")
+
+a = 45
+b = 15
+c = 3
+
+print(a - b / c)
+
+quantity = 10
+price = 5.0
+total = quantity * price
+tax = total / 5
+
+Total = total + tax
+
+print(total)
+
+days = "Mon, Tue, Wed, Thu, Fri, Sat, Sun"
+print(days[::5])
+
+data = "1:A, 2:B, 3:C, 4:D, 5:E, 6:F, 7:G, 8:H"
+print(data[1:6])
+print(data[::5])
+print(data[:-1:5])
+
+#create a python variable
+kiana = "change" #str var
+Age =30 # num var
+
+#call py to give me the type of the variables created above
+print(type(kiana))
+print(type(Age))
+print(kiana)
+#print(Kiana) #will not run this one because py var are case sensitive!
+
+#value stored in a variable has a type; rather than the variable has a type itself
+#variable: A name or label assigned to a value
+
+Age = '30 years'
+print(type(Age))
+age2 = 51
+
+#type error in py: does not concatenate str and int value
+#Think of errors as your friends: py will tell you that your code wont work
+
+print(kiana + " " + Age) #str + str works
+#print(kiana + " " + age2) #TypeError: can only concatenate str (not "int") to str
+
+#operator precedence
+a = 12
+b = 3
+print (a+b/3-4 * 12)
+#multiplication and division come first
+print(a + (b/3) - (4*2))
+# multiplication and division --> eq precedence, higher precdence than +&-
+# addition and subtraction have also equal precedence
+# expressions with above operators are evaluated from left to right
+print(a/(b*a)/b)
+
+
+#The string data type
+#strins are one of the py seq data types
+#strings: seq of characters
+
+
+
+parrot = "norwegian blue"
+print (parrot)
+print(parrot[3]) # the number in the bracket is called index and is used to index into the string
+
+mini_challenge = "we win"
+print (mini_challenge)
+print ('w\ne\n''\nw\ni\nn')
+print(mini_challenge[1])
+
+print(parrot[-1])
+print(parrot[-14])
+print ()
+
+         #01234567890123
+parrot = "norwegian blue"
+print(parrot[-2])
+print(parrot[-11])
+print(parrot[0])
+#negative index can be obtained by taking the string length and subtract from positive numbers
+print(parrot[0-14])
+
+#slicing
+print(parrot[0:6])
+print(parrot[3:5])
+# slice without identifying the start position
+print(parrot[:9])#you still need the colon
+print(parrot [10:14])
+print(parrot [-4:])
+
+
+#start and stop values in the slices
+print(parrot[6:])
+print(parrot[:6])
+print(parrot[:6] + parrot[6:])
+
+#only : in the bracket
+print(parrot[:]) #print the comp str out
+print(parrot[0:6])
+
+#Using step in slice
+print(parrot[0:6:2])
+number = "9,223;372:036 854,775;807"
+print(number[1::4]) #starts at index position 1, extends up to the end, and slices every 4 steps
+
+#binding a variable to slice:
+separators = number[1::4]
+print(separators)
+
+values = "". join(char if char not in separators else "" for char in number).split()
+print([int(val) for val in values])
+
+#slicing backward
+letters = "abcdefghijklmnopqrstuvwxyz"
+backwards = letters[25:0:-1] #because we have a negative step the start value must be greater than stop value
+print(backwards)
+backwards1= letters[25:0]  #starts at index position 0, extends to, but not including index position 0
+print(backwards1)
+#include letter a:
+backwards2 = letters[25: :-1]
+print(backwards2)
+#if we use stop value of -1 doesnt work
+
+
+slice1 = letters[:25]
+print(slice1)
+slice2 = letters[25:]
+print(slice2)
+print(letters[:])
+print(letters[-1])
+print(letters[:-24])
+
+#create slice that produce qpo
+print(letters[16:13:-1])
+#think of negative step as taking a backward step
+#makes sense start value > stop value
+
+#produce edcba
+print(letters[4::-1])
+
+#produce last 8 characters in order
+print(letters[25:17:-1]) #or
+print(letters[:-9:-1])
+
+#python idioms
+print(letters[:]) #print the whole seq
+print(letters[::-1]) #reverse the whole seq
+print(letters[-4:]) #the last 4 characters
+print(letters [-1:]) #the last item
+print(letters[:1]) #the first item
+
+#Sequence Operators:
+string1 = "he's "
+string2 = "probably "
+string3 = "pining "
+string4 = "for the "
+string5 = "fjord "
+
+#addition
+print(string1 + string2 + string3 + string4 + string5)
+
+#multiplication
+print("hello " * 5)
+today = "friday"
+
+# in operator evaluates "true" if the first thing exist in the second and "false" otherwise
+print("day" in today) #true
+print("fri" in today) #true
+print("thur" in today) #false
+print("parrot" in today) #false
+print("parrot" in "fjord") #false
+
+#varios ways to format strings and manupilate
+#In python every data type can be coerced into str representation
+age = 24
+print("my age is " + str(age) + " years ")
+#dot format and replacement method
+print("my age is {0} years".format(age))
+
+print("There are {0} days in {1}, {2}, {3}, {4}, {5}, {6} and {7}"
+      .format(31, "jan", "mar", "may", "jul", "aug", "oct", "dec"))
+#replacement fields are those in curly brackets
+#or
+print("There are {0} days in jan, mar, and may". format(31))
+
+print("jan: {2}, feb: {0}, mar: {1}, may: {2}, june: {1}, jul: {2}, aug: {2},"
+      "sep: {1}, oct: {2}, nov: {1}, dec: {2}".format(28,30,31))
+
+#using triple quotes
+print("""" jan: {2}
+feb: {0}
+mar: {1}
+may: {2}
+june:{1}
+jul: {2}
+aug: {2}
+sep: {1}
+oct: {2}
+nov: {1}
+dec: {2}
+""".format(28,30,31))
+
+#string formatting
+for i in range(1, 13):
+    print("no. {0:2} squared is {1:4} and cubed is {2:4}". format(i, i ** 2, i ** 3))
+#2 is field width and separated from the index number in the curly bracket with colon
+
+#precision for a floating point number
+
+print("pi is approx {0:12}". format(22/7)) #12 is the value we specified for the width
+print("pi is approx {0:12f}". format(22/7)) #f gives us default value of 6 decimal points
+
+print("pi is approx {0:12.50f}". format(22/7))
+#we are specifying a floating format, but with precisions of 50, 50 decimal points after
+print("pi is approx {0:52.50f}". format(22/7))
+print("pi is approx {0:62.50f}". format(22/7))
+print("pi is approx {0:72.50f}". format(22/7))
+
+#f-string
+age3 = 20
+print(type(age3))
+print(f"she is {age3} years old".format(age3))
+#or
+print(f"pi is approx {22/7:12.50f}")
+
+#string interpolation in py.2: same as macro in SAS
+#similar printf in c
+age4 = 24
+print("my age is %d years" % age4)
+
+major = "years"
+minor = "months"
+print("my age is %d %s, %d %s" %(age4, major, 6, minor))
+print("pi is approx %60.50f" %(22/7))
